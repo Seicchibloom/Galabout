@@ -21,7 +21,10 @@ class DatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener 
     }
 
     override fun onDateSet(view: DatePicker, year: Int, month: Int, dayOfMonth: Int) {
-        // Handle date selection here, for example, you can pass the selected date back to the activity
-        // using an interface callback
+        // Communicate the selected date back to the calling activity or fragment
+        val activity = activity
+        if (activity is DatePickerDialog.OnDateSetListener) {
+            activity.onDateSet(view, year, month, dayOfMonth)
+        }
     }
 }
