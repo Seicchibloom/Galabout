@@ -45,17 +45,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.418" />
-    <TextView
-        android:id="@+id/checkOutError"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Check-out date cannot be before check-in date"
-        android:textColor="#FF0000"
-        android:visibility="gone"
-        app:layout_constraintStart_toEndOf="@id/checkOutButton"
-        app:layout_constraintTop_toTopOf="@id/checkOutButton"
-        />
-
 
     <Button
         android:id="@+id/submitButton"
